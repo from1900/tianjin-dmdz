@@ -72,7 +72,7 @@
         });
         layer_OSMBlackandWhite_0;
         map.addLayer(layer_OSMBlackandWhite_0);
-        function pop___1(feature, layer) {
+        function pop_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -141,9 +141,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style___1_0() {
+        function style_1_0() {
             return {
-                pane: 'pane___1',
+                pane: 'pane_1',
                 radius: 5.6,
                 opacity: 1,
                 color: 'rgba(61,128,53,1.0)',
@@ -157,26 +157,26 @@
                 interactive: true,
             }
         }
-        map.createPane('pane___1');
-        map.getPane('pane___1').style.zIndex = 401;
-        map.getPane('pane___1').style['mix-blend-mode'] = 'normal';
-        var layer___1 = new L.geoJson(json___1, {
+        map.createPane('pane_1');
+        map.getPane('pane_1').style.zIndex = 401;
+        map.getPane('pane_1').style['mix-blend-mode'] = 'normal';
+        var layer_1 = new L.geoJson(json_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json___1',
-            layerName: 'layer___1',
-            pane: 'pane___1',
-            onEachFeature: pop___1,
+            dataVar: 'json_1',
+            layerName: 'layer_1',
+            pane: 'pane_1',
+            onEachFeature: pop_1,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style___1_0(feature));
+                return L.circleMarker(latlng, style_1_0(feature));
             },
         });
-        bounds_group.addLayer(layer___1);
-        map.addLayer(layer___1);
+        bounds_group.addLayer(layer_1);
+        map.addLayer(layer_1);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -189,27 +189,27 @@
         .title += 'Search for a place';
         setBounds();
         var i = 0;
-        layer___1.eachLayer(function(layer) {
+        layer_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['norm_name'] !== null?String('<div style="color: #000000; font-size: 8pt; font-weight: bold; font-family: \'微软雅黑\', sans-serif;">' + layer.feature.properties['norm_name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css___1'});
+            layer.bindTooltip((layer.feature.properties['norm_name'] !== null?String('<div style="color: #000000; font-size: 8pt; font-weight: bold; font-family: \'微软雅黑\', sans-serif;">' + layer.feature.properties['norm_name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer___1]);
+        resetLabels([layer_1]);
         map.on("zoomend", function(){
-            resetLabels([layer___1]);
+            resetLabels([layer_1]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer___1]);
+            resetLabels([layer_1]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer___1]);
+            resetLabels([layer_1]);
         });
         </script>
     </body>
