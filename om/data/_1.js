@@ -1,6 +1,6 @@
-var json___1 = {
+var json_1 = {
 "type": "FeatureCollection",
-"name": "__1",
+"name": "_1",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "ID": 2.0, "strGuid": "2736975", "intBuildForm": 0.0, "strBuildName": "振谷西街8号", "strBuildType": null, "intBuildStructure": null, "strArea": "120118000000", "strStreet": "120118110000", "strCommunity": "120118110203", "strGrid": null, "strAddress": "梁头镇谷庄子村振谷西街8号", "dtModifyTime": "2020\/7\/24 14:48:05", "norm_name": "静海区梁头镇谷庄子村村民委员会", "norm_address": "天津市静海区梁头镇静海区梁头镇谷庄子村村民委员会", "norm_x": 116.868029, "norm_y": 38.966443 }, "geometry": { "type": "Point", "coordinates": [ 116.868029, 38.966443 ] } },
